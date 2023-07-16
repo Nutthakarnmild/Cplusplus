@@ -1,10 +1,13 @@
 #include <iostream>
 using namespace std;
 int main()
-{	cout<<"    C    "<<endl;
-	cout<<"   C C    "<<endl;
-	cout<<"  C   C    "<<endl;
-	cout<<" C     C    "<<endl;
-	cout<<" CCCCCCC    "<<endl;
-	cout<<" C     C    "<<endl;
+{   cout<<"   \x23\x23\x23\x23 \n" ;
+    cout<<"  \x23\x23  \x23\x23 \n" ;
+    cout<<" \x23\x23 \n" ;
+    cout<<" \x23\x23 \n" ;
+    cout<<"  \x23\x23  \x23\x23 \n" ;
+    cout<<"   \x23\x23\x23\x23 \n" ;
+
+	system("pause");
+	return(0);
 }
