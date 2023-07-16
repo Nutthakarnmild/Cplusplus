@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 int main()
-{	cout<<"    c    "<<endl;
-	cout<<"   c c    "<<endl;
-	cout<<"  c   c    "<<endl;
-	cout<<" c     c    "<<endl;
-	cout<<" ccccccc    "<<endl;
-	cout<<" c     c    "<<endl;
+{	cout<<"    C    "<<endl;
+	cout<<"   C C    "<<endl;
+	cout<<"  C   C    "<<endl;
+	cout<<" C     C    "<<endl;
+	cout<<" CCCCCCC    "<<endl;
+	cout<<" C     C    "<<endl;
 }
