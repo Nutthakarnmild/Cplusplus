@@ -22,6 +22,6 @@ int main()
 	cout << "Mid-term : "<< MT <<endl;
 	cout << "Final : "<< FN <<endl;
 	cout << "Total : "<< (MT+FN+QT) <<endl;
-	system("puase");
+	system("pause");
 	return(0);
 }
