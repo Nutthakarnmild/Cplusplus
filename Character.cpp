@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {	
-	int A=10,B=20,C=30;
+	int A=0,B=0,C=0;
 	int t = 0;
 	char a,b,c;
 	cout<<"Enter Character (A,B,C) : ";
