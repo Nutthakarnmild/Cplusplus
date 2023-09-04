@@ -1,33 +1,45 @@
 #include <iostream>
-#include <string>
 using namespace std;
-void ParseName(string &FirstName,string &LastName, const string FullName);	
+void CalCircle();
+void CalRec();
 int main()
-{
-	string Name = "Stroustrup, Bjarne";
-	string LastName, FirstName;
-	ParseName(FirstName,LastName,Name);
-	Name = FirstName +" "+LastName;
-	return(0);
+{		char Ch;
+	do{
+		cout<<"****************************"<<endl;
+		cout<<"Program Calculate of Circle."<<endl;
+		cout<<"****************************"<<endl;
+		cout<<endl;
+		cout<<"1.Circle\n2.Ractangle\n3.Exit\n";
+		cout<<endl;
+		cout<<"Choose Menu : ";
+		cin>>Ch;
+		if(Ch == '1') CalCircle();
+			else if (Ch == '2') CalRec();
+			else if (Ch == '3') cout<<"Exit"<<endl;
+			else cout<<"Wrong Menu"<<endl;
+	}while(Ch != '3');
+	system("pause");
 }
 
-void ParseName(string &FirstName,string &LastName, const string FullName)
+void CalCircle()
 {
-	int I = FullName.find(",");
-	LastName = FullName.substr(0,I);
-	FirstName = FullName.substr(I+2,FullName.size());
+	float Radius,Area,Circumference;
+	cout<<"Input redius : ";
+	cin>>Radius;
+	Area = 3.14f*Radius*Radius;
+	Circumference = 2*3.14f*Radius;
+	cout<<"Area of circle : "<<Area<<endl;
+	cout<<"Circumference of circle : "<<Circumference<<endl;
+	cout<<"Diameter of circle : "<<(2*Radius)<<endl;
 }
-void chek_char(string FirstName)
-{	
-	int lower = 0,upper = 0,special = 0;
-	for(int i = 0;i <= FirstName.length()-1;i++)
-	{
-		cout<<FirstName.at(i)<<endl;
-		if(islower(FirstName.at(i))) lower++;
-		else if(isupper(FirstName.at(i))) upper++;
-		else special++;
-	}
-	cout<<"Lower character = "<<lower<<endl;
-	cout<<"upper character = "<<upper<<endl;
-	cout<<"special character = "<<special<<endl;
+
+void CalRec()
+{
+	float Width,Length,Area;
+	cout<<"Input Width : ";
+	cin>>Width;
+	cout<<"Input Length : ";
+	cin>>Length;
+	Area = Width*Length;
+	cout<<"Area of Ractangle : "<<Area<<endl;
 }
