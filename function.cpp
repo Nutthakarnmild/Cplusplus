@@ -49,7 +49,7 @@ int main()
 				cout<<"not process\n";
 		}	
 	}while(Flag);
-	cout<<"\n...Exot Program...\n";
+	cout<<"\n...Exit Program...\n";
 	return(0);
 }
 
