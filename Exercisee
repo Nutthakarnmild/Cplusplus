@@ -1,0 +1,80 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+void Menu1(int &num,int Quiz[10],int Mid[10],int Final[10]);
+void Menu2(int &num,int Quiz[10],int Mid[10],int Final[10]);
+void Menu3(int &num,int Quiz[10],int Mid[10],int Final[10]);
+int main()
+{
+	int num = 0;
+	int Quiz[10],Mid[10],Final[10];
+	char menu;
+	cout<<"=======================\n";
+	cout<<"\tMenu\t\n";
+	cout<<"=======================\n";
+	cout<<"1.Input student record\n2.View all student record\n3.Show a student by ID\n4.Exit";
+	cout<<endl;
+	do{
+		cout<<"Select menu : ";
+		cin>>menu;
+		if(menu == '1')
+		{	Menu1(num,Quiz,Mid,Final);
+		}
+		else if(menu == '2')
+		{	Menu2(num,Quiz,Mid,Final);
+		}
+		else if(menu == '3')
+		{	Menu3(num,Quiz,Mid,Final);
+		}
+	}while(menu != '4');
+	system("pause");
+	return(0);	
+}
+void Menu1(int &num,int Quiz[10],int Mid[10],int Final[10])
+{
+	cout<<"Input Number of Student : ";
+	cin>>num;
+	for(int i =0;i < num;i++){
+	cout<<"Number "<<i+1<<endl;
+	cout<<"Input Quiz : ";
+	cin>>Quiz[i];
+	cout<<"Input Midterm : ";
+	cin>>Mid[i];
+	cout<<"Input Final : ";
+	cin>>Final[i];
+	}
+}
+void Menu2(int &num,int Quiz[10],int Mid[10],int Final[10])
+{
+	cout<<"----------------------------\n";
+	cout<<"StdID  Quiz  Midterm  Final\n";
+	cout<<"----------------------------\n";
+	for(int i = 0;i < num;i++){
+		cout<<i+1<<setw(9)<<Quiz[i]<<setw(9)<<Mid[i]<<setw(9)<<Final[i]<<endl;
+	}
+
+}
+void Menu3(int &num,int Quiz[10],int Mid[10],int Final[10])
+{
+	int id;
+	cout<<"Input ID : ";
+	cin>>id;
+	for(int i = 0;i < num;i++)
+	{
+		if (id == i+1)
+		{
+			cout<<"----------------------------\n";
+			cout<<"StdID  Quiz  Midterm  Final\n";
+			cout<<"----------------------------\n";
+			for(int i = 0;i < num;i++){
+			cout<<i+1<<setw(9)<<Quiz[i]<<setw(9)<<Mid[i]<<setw(9)<<Final[i]<<endl;
+			cout<<"----------------------------\n";
+			}
+		}else
+		{cout<<"Your ID is not found"<<endl;
+		}
+		break;
+	}
+
+}
