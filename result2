@@ -1,0 +1,48 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+void check_result(int x);
+int main()
+{
+	int num[10],num2[4],total = 0,avg = 0,max = 0,min = 0,no_std;
+	string name[10];
+
+	cout<<"In put number of student : ";
+	cin>>no_std;
+	for (int i = 0;i < no_std;i++){
+	cout<<"Name ["<<i+1<<"] : ";
+	cin>>name[i];
+	cout<<"Score ["<<i+1<<"] : ";
+	cin>>num[i];
+	}
+	cout<<endl;
+	cout<<"----------------------\n";
+	cout<<"Name   Score   result\n";
+	cout<<"----------------------\n";
+	min = num[0];
+	for (int i = 0;i < no_std;i++){
+	cout<<name[i]<<"\t"<<num[i]<<"\t";
+	check_result(num[i]);
+	total = total+num[i];
+	if(num[i]>max)
+		max = num[i];
+	else if(num[i]<min)
+		min = num[i];
+	}
+	cout<<"----------------------\n";
+	cout<<endl;
+	cout<<"Max score = "<<max<<endl;
+	cout<<"Min score = "<<min<<endl;
+	cout<<"Total = "<<total<<endl;
+	cout<<"Average = "<<(float)total/4<<endl;
+	system("pause");
+	return(0);
+}
+void check_result(int x)
+{
+if(x >= 50)
+	cout<<"Pass"<<endl;
+else
+	cout<<"Faile"<<endl;
+}
