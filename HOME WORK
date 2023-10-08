@@ -40,3 +40,18 @@ float GPA (int num[3])
 {	for(int j=0;j<3;j++)
 	cout<<num[j]/4<<endl;
 }
+void chek_grade (int num[3][3])
+{	
+    if( num[i][j] >= 90 ) {
+        cout<<"A";
+    } else if( score >= 80 ) {
+        cout<<"B";
+    } else if( score >= 70 ) {
+        cout<<"C";
+    } else if( score >= 60 ) {
+        cout<<"D";
+    } else {
+        cout<<"F";
+    }
+
+}
