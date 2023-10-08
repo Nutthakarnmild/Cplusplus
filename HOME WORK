@@ -39,6 +39,7 @@ void display (int num[3][3],string name[3])
 			cout<<num[i][j];
 			grade = chek_grade(score)+grade;
 		}
+		GPA(grade);
 		cout<<endl;
 	}
 	cout<<"=========================================="<<endl;
